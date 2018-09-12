@@ -128,9 +128,9 @@ function OpenShopMenu()
 				end
 
 				if data.current.value == 'no' then
-
-					TriggerEvent('esx_skin:getLastSkin', function(skin)
-						TriggerEvent('skinchanger:loadSkin', skin)
+					
+					ESX.TriggerServerCallback('esx_skin:getPlayerSkin', function(skin)
+						TriggerEvent('skinchanger:loadSkin', skin) 
 					end)
 
 				end
